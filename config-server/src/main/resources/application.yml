@@ -1,3 +1,6 @@
+server:
+  port: 8888
+
 spring:
   application:
     name: config-service
@@ -7,7 +10,12 @@ spring:
         git:
           uri: https://github.com/wiselyman/Spring-Cloud-Bus-Demo.git
           search-paths: config-files
-server:
-  port: 8888
+    stream:
+      kafka:
+        binder:
+          brokers: 192.168.1.222
+
+#management.endpoints.web.exposure.include: '*'
+management.endpoints.web.exposure.include: bus-refresh
 
 

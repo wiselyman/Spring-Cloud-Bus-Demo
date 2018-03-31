@@ -1,13 +1,14 @@
-server:
-  port: 8080
-
 spring:
   application:
     name: demo-service
   cloud:
     config:
       uri: http://localhost:8888
+    stream:
+      kafka:
+        binder:
+          brokers: 192.168.1.222
   profiles:
     active: dev
 
-logging.level.org.springframework.cloud.config: debug
+management.endpoints.web.exposure.include: '*'

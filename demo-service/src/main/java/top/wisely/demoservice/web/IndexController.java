@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class IndexController {
-    @Value("author.name")
+    @Value("${author.name}")
     String authorName;
 
     @GetMapping("/")
